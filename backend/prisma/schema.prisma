@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  registrationNumber String  @id @map("registration_number")
+
+  mathScore            Float? @map("math_score")
+  literatureScore      Float? @map("literature_score")
+  foreignLanguageScore Float? @map("foreign_language_score")
+  physicsScore         Float? @map("physics_score")
+  chemistryScore       Float? @map("chemistry_score")
+  biologyScore         Float? @map("biology_score")
+  historyScore         Float? @map("history_score")
+  geographyScore       Float? @map("geography_score")
+  civicEducationScore  Float? @map("civic_education_score")
+
+  foreignLanguageCode String? @map("foreign_language_code")
+
+  @@map("students")
+}
