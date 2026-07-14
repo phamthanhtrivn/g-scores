@@ -9,4 +9,10 @@ export class ReportController {
   async getScoreLevelsStatistics() {
     return this.reportService.getScoreLevelsStatistics();
   }
+
+  @Get('top-group-a')
+  async getTopGroupAStudents() {
+    return this.reportService.getTopGroupAStudents();
+  }
 }
+
