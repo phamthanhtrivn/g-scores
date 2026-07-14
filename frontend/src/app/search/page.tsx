@@ -113,7 +113,7 @@ export default function SearchScores() {
       {data && (
         <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-8 text-white text-center">
+            <div className="bg-linear-to-r from-blue-600 to-indigo-600 px-6 py-8 text-white text-center">
               <GraduationCap className="h-12 w-12 mx-auto mb-4 opacity-90" />
               <h2 className="text-2xl font-bold mb-1">Exam Results</h2>
               <p className="text-blue-100">

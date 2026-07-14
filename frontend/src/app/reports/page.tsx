@@ -20,7 +20,7 @@ export default async function Reports() {
         </div>
       </div>
 
-      <div className="bg-white shadow-sm border border-gray-100 rounded-2xl p-6 lg:p-8">
+      <div className="bg-white shadow-sm border border-gray-100 rounded-2xl p-4 sm:p-6 lg:p-8">
         <h2 className="text-lg font-semibold text-gray-900 mb-6">
           Subject Score Distribution
         </h2>
@@ -29,7 +29,7 @@ export default async function Reports() {
           <ScoreLevelChart data={scoreData} />
         ) : (
           <div className="relative h-96 w-full rounded-xl border-2 border-dashed border-gray-200 bg-blue-50/30 flex flex-col items-center justify-center group overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-linear-to-b from-transparent to-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
             <div className="z-10 flex flex-col items-center text-center p-6">
               <div className="h-16 w-16 bg-white rounded-full shadow-sm flex items-center justify-center mb-4">
