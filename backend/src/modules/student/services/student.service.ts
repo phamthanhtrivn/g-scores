@@ -16,9 +16,7 @@ export class StudentService {
     });
 
     if (!student) {
-      throw new NotFoundException(
-        'Không tìm thấy học sinh với số báo danh này',
-      );
+      throw new NotFoundException('Can not found this register number');
     }
 
     const scores = this.subjectService.getAllSubjects().map((subject) => ({

@@ -18,3 +18,20 @@ export interface SubjectScoreLevel {
   subjectName: string;
   levels: ScoreLevel;
 }
+
+export interface ForeignLanguageInfo {
+  code: string;
+  name: string;
+}
+
+export interface StudentSubjectScore {
+  subjectCode: string;
+  subjectName: string;
+  score: number | null;
+}
+
+export interface StudentScoreDetail {
+  registrationNumber: string;
+  foreignLanguage: ForeignLanguageInfo;
+  scores: StudentSubjectScore[];
+}

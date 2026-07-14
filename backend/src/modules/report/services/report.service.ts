@@ -61,7 +61,7 @@ export class ReportService {
     );
 
     if (!math || !physics || !chemistry) {
-      throw new Error('Các môn học của khối A chưa được cấu hình.');
+      throw new Error('Subjects of Group A are not configure.');
     }
 
     const mathCol = toSnakeCase(math.getScoreField());

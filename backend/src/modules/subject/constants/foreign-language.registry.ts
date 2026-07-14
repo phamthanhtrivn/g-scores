@@ -1,11 +1,11 @@
 import { ForeignLanguageCode } from '../enums/foreign-language-code.enum';
 
 export const FOREIGN_LANGUAGE_REGISTRY: Record<string, string> = {
-  [ForeignLanguageCode.N1]: 'Tiếng Anh',
-  [ForeignLanguageCode.N2]: 'Tiếng Nga',
-  [ForeignLanguageCode.N3]: 'Tiếng Pháp',
-  [ForeignLanguageCode.N4]: 'Tiếng Trung Quốc',
-  [ForeignLanguageCode.N5]: 'Tiếng Đức',
-  [ForeignLanguageCode.N6]: 'Tiếng Nhật',
-  [ForeignLanguageCode.N7]: 'Tiếng Hàn Quốc',
+  [ForeignLanguageCode.N1]: 'English',
+  [ForeignLanguageCode.N2]: 'Russian',
+  [ForeignLanguageCode.N3]: 'French',
+  [ForeignLanguageCode.N4]: 'Chinese',
+  [ForeignLanguageCode.N5]: 'German',
+  [ForeignLanguageCode.N6]: 'Japanese',
+  [ForeignLanguageCode.N7]: 'Korean',
 };
