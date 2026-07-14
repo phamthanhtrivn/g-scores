@@ -1,4 +1,4 @@
-import { StudentScoreGroupA } from "@/types";
+import { StudentScoreGroupA, SubjectScoreLevel } from "@/types";
 import axios from "axios";
 
 const apiClient = axios.create({
@@ -12,6 +12,16 @@ export async function getTopGroupA(): Promise<StudentScoreGroupA[]> {
     return res.data?.data || [];
   } catch (error) {
     console.error("Error fetching Top Group A with axios:", error);
+    return [];
+  }
+}
+
+export async function getScoreLevels(): Promise<SubjectScoreLevel[]> {
+  try {
+    const res = await apiClient.get("/api/reports/score-levels");
+    return res.data?.data || [];
+  } catch (error) {
+    console.error("Error fetching Score Levels with axios:", error);
     return [];
   }
 }
