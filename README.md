@@ -126,3 +126,5 @@ _The frontend will be available at_ `http://localhost:3000`_._
 ### Option 3: Live Website
 
 If you just want to experience the application without running it locally, you can visit the deployed version here: [**https://g-scores-inky.vercel.app**](https://g-scores-inky.vercel.app)
+
+> **Note**: The backend of this live version is hosted on Render's free tier. If there are no requests for 15 minutes, the server will go to sleep. As a result, the first request after a period of inactivity may take around 10–20 seconds to respond, depending on the cold start time.
