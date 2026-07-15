@@ -63,12 +63,12 @@ docker-compose down
 
 In this mode, you will run PostgreSQL via Docker and start the frontend/backend manually. This is useful if you want to run the code natively on your machine for debugging.
 
-#### 1. Start the Database
+#### 1. Start Database & Redis
 
-Ensure Docker is running, create the root `.env` file, then start the PostgreSQL container:
+Ensure Docker is running, create the root `.env` file, then start the PostgreSQL and Redis containers:
 
 ```bash
-docker-compose up -d postgres
+docker-compose up -d postgres redis
 ```
 
 #### 2. Start the Backend
