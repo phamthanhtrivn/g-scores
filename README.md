@@ -48,7 +48,8 @@ docker exec -it g-scores-backend npx prisma db seed
 ```
 
 5. The services will be available at:
-   - **Frontend**: `http://localhost:3000`
+
+   **Frontend**: `http://localhost:3000`
    - **Backend API**: `http://localhost:3001`
 
 To stop all services, run:
