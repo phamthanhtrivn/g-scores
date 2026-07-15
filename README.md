@@ -4,10 +4,10 @@ This project consists of a Next.js Frontend and a NestJS Backend using PostgreSQ
 
 ## Prerequisites (Environment Variables)
 
-Before running the project, you must set up the environment variables. 
-Create a `.env` file in the **root** directory (and/or inside the frontend/backend directories depending on the mode you choose) with the necessary variables.
+Before running the project, you must set up the environment variables. Create a `.env` file in the **root** directory (and/or inside the frontend/backend directories depending on the mode you choose) with the necessary variables.
 
 A typical root `.env` for Docker should look like this:
+
 ```env
 POSTGRES_USER=root
 POSTGRES_PASSWORD=password
@@ -23,6 +23,7 @@ There are two ways to run this project:
 
 1. **Full Docker Mode (Recommended)**: Run all services (Frontend, Backend, and Database) entirely using Docker.
 2. **Hybrid Mode**: Run the database in Docker, but run Frontend and Backend manually using Node.js.
+3. **Live Website**: Experience the deployed application online without running it locally.
 
 ---
 
@@ -38,10 +39,9 @@ In this mode, Docker Compose handles the entire stack, spinning up the Database,
 docker-compose up --build -d
 ```
 
-*(Note: The backend container will automatically run database migrations on startup).*
+_(Note: The backend container will automatically run database migrations on startup)._
 
-4. **(Required) Seed Initial Data**:
-Since the database will be empty on first run, you need to populate it with the initial dataset. Run the following command once:
+4. **(Required) Seed Initial Data**: Since the database will be empty on first run, you need to populate it with the initial dataset. Run the following command once:
 
 ```bash
 docker exec -it g-scores-backend npx prisma db seed
@@ -80,7 +80,8 @@ cd backend
 npm install
 ```
 
-**Create a `backend/.env` file** with the connection string pointing to your local mapped database port (e.g., 5433):
+**Create a** `backend/.env` **file** with the connection string pointing to your local mapped database port (e.g., 5433):
+
 ```env
 PORT=3001
 DATABASE_URL="postgresql://root:password@localhost:5433/g_scores?schema=public"
@@ -105,14 +106,22 @@ cd frontend
 npm install
 ```
 
-**Create a `frontend/.env` file** pointing to the backend:
+**Create a** `frontend/.env` **file** pointing to the backend:
+
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:3001
 ```
 
 Start the frontend server:
+
 ```bash
 npm run dev
 ```
 
 _The frontend will be available at_ `http://localhost:3000`_._
+
+---
+
+### Option 3: Live Website
+
+If you just want to experience the application without running it locally, you can visit the deployed version here: [**https://g-scores-inky.vercel.app**](https://g-scores-inky.vercel.app)
