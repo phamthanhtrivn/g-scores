@@ -12,7 +12,7 @@ const baseURL = isServer
 
 const apiClient = axios.create({
   baseURL,
-  timeout: 10000,
+  timeout: 60000,
 });
 
 export async function getTopGroupA(): Promise<StudentScoreGroupA[]> {
